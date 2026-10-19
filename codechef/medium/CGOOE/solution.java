@@ -30,11 +30,10 @@ class Codechef
 		         }
 		         if(flag==1)
 		         {
-		             c++;
+		             System.out.println(c);
 		         }
 		         
 		    }
-		    System.out.println(c);
 		}
 
 	}
