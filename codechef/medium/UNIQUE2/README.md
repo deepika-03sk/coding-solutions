@@ -59,7 +59,7 @@ The distinct elements are $12$, $7$, $4$, $15$, and $9$, in the order of their f
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-19T16:12:44.321Z  
+**Submitted:** 2026-10-19T16:13:56.408Z  
 
 ```java
 import java.util.*;
@@ -92,7 +92,7 @@ class Codechef
 		
 		if(c==1)
 		{
-		System.out.println(a[i] +" ");
+		System.out.print(a[i] +" ");
 		}
 	}
 
