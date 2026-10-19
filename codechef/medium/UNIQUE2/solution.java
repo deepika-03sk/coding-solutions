@@ -26,7 +26,7 @@ class Codechef
 		        }
 		    }
 		
-		if(c==1)
+		if(c==0)
 		{
 		System.out.print(a[i] +" ");
 		}
