@@ -22,12 +22,13 @@ class Codechef
 		        if(a[i]==a[j])
 		        {
 		            c++;
+		            break;
 		        }
 		    }
 		
 		if(c==1)
 		{
-		System.out.println(a[i]);
+		System.out.println(a[i] +" ");
 		}
 	}
 
