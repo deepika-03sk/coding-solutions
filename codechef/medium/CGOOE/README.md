@@ -52,7 +52,7 @@ At position $7$, the value $410$ is smaller than the previous five values: $600,
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-19T16:24:59.776Z  
+**Submitted:** 2026-10-19T16:25:20.214Z  
 
 ```java
 import java.util.*;
@@ -87,11 +87,10 @@ class Codechef
 		         }
 		         if(flag==1)
 		         {
-		             c++;
+		             System.out.println(c);
 		         }
 		         
 		    }
-		    System.out.println(c);
 		}
 
 	}
