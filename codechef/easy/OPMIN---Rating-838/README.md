@@ -67,7 +67,7 @@ Since all elements of the final array are $2$, the maximum value of the array is
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-20T13:54:08.903Z  
+**Submitted:** 2026-10-20T13:54:33.104Z  
 
 ```java
 class Solution {
