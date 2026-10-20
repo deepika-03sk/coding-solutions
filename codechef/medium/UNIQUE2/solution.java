@@ -14,10 +14,10 @@ class Codechef
 		    a[i]=sc.nextInt();
 		    
 		}
-		for(int i=00;i<n;i++)
+		for(int i=0;i<n;i++)
 		{
 		    int c=0;
-		    for(int j=0;j<n;j++)
+		    for(int j=0;j<i;j++)
 		    {
 		        if(a[i]==a[j])
 		        {
@@ -26,9 +26,9 @@ class Codechef
 		        }
 		    }
 		
-		if(c==1)
+		if(c==0)
 		{
-		System.out.println(a[i] +" ");
+		System.out.print(a[i] +" ");
 		}
 	}
 
