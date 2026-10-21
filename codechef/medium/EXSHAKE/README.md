@@ -61,7 +61,7 @@ Test case $1$: Inviting the groups with $1$ and $2$ people gives $3$ people and 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-21T15:21:42.061Z  
+**Submitted:** 2026-10-21T15:28:09.056Z  
 
 ```java
 import java.util.*;
@@ -72,7 +72,6 @@ class Codechef
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
-		// your code goes here
 		Scanner sc=new Scanner(System.in);
 		int t=sc.nextInt();
 		while(t-->0)
@@ -84,7 +83,23 @@ class Codechef
 		    {
 		        a[i]=sc.nextInt();
 		    }
-		    
+		    Arrays.sort(a);
+		    int ppl=0;
+		    int c=0;
+		    for(int i=0;i<n;i++)
+		    {
+		        int tot=ppl+a[i];
+		       int  hand=tot*(tot-1)/2;
+		        if(hand<=m)
+		        {
+		            ppl=tot;
+		            c++;
+		        }
+		        else{
+		            break;
+		        }
+		    }
+		    System.out.println(c);
 		}
 
 	}
