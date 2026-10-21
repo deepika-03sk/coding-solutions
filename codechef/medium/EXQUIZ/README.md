@@ -57,7 +57,7 @@ Test case $4$: Since the final score is $0$, all questions can be skipped.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-21T15:41:36.491Z  
+**Submitted:** 2026-10-21T15:41:55.372Z  
 
 ```java
 import java.util.*;
