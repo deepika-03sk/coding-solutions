@@ -66,7 +66,7 @@ Therefore, the answer is `NO`.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-21T13:23:10.309Z  
+**Submitted:** 2026-10-21T13:24:47.445Z  
 
 ```java
 import java.util.*;
