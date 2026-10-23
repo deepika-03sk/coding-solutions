@@ -61,16 +61,15 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-17T17:22:58.365Z  
+**Submitted:** 2026-10-23T16:17:46.062Z  
 
 ```java
 import java.util.Scanner;
-
+import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int t = scanner.nextInt();
-
         while (t-- > 0) {
             int n = scanner.nextInt();
             int[] a = new int[n];
@@ -78,28 +77,19 @@ public class Main {
             for (int i = 0; i < n; i++) {
                 a[i] = scanner.nextInt();
             }
-            
-            int max1=0;
-            int max2=0;
-         
-            
-            for (int i=0;i<n;i++)
-           
+           Arrays.sort(a);
+           int max=a[n-1];
+           int sec=0;
+            for(int i=n-2;i>=0;i--)
             {
-              int  x=a[i];
-                if(x>max1)
+                if(a[i]!=max)
                 {
-                    max2=max1;
-                    max1=x;
-                }
-                else if(x<max1 && x>max2)
-                {
-                    max2=x;
+                    sec=a[i];
+                    break;
+                    
                 }
             }
-            System.out.println(max1 + max2);
-
-            
+           System.out.println(max+sec);
         }
     }
 }
