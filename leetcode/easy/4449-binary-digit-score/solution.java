@@ -1,23 +1,7 @@
 class Solution {
     public int calculateScore(int a, int b) {
-        int s1=0;
-        int s2=0;
-        while(a>0)
-        {
-            if(a%2==1)
-            {
-                s1++;
-            }
-            a=a/2;
-        }
-        while(b>0)
-        {
-            if(b%2==1)
-            {
-                s2++;
-            }
-            b=b/2;
-        }
+        int s1=Integer.bitCount(a);
+        int s2=Integer.bitCount(b);
         if(s1>=s2)
         return s1*s2;
         else
