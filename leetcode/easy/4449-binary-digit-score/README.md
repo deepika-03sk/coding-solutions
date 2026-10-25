@@ -65,30 +65,14 @@ A  **set bit**  refers to a bit in the binary representation of a number that ha
 
 **Language:** Java  
 **Runtime:** 1 ms (beats 100.00%)  
-**Memory:** 42.2 MB (beats 100.00%)  
-**Submitted:** 2026-10-25T02:46:43.722Z  
+**Memory:** 41.9 MB (beats 100.00%)  
+**Submitted:** 2026-10-25T02:48:33.569Z  
 
 ```java
 class Solution {
     public int calculateScore(int a, int b) {
-        int s1=0;
-        int s2=0;
-        while(a>0)
-        {
-            if(a%2==1)
-            {
-                s1++;
-            }
-            a=a/2;
-        }
-        while(b>0)
-        {
-            if(b%2==1)
-            {
-                s2++;
-            }
-            b=b/2;
-        }
+        int s1=Integer.bitCount(a);
+        int s2=Integer.bitCount(b);
         if(s1>=s2)
         return s1*s2;
         else
