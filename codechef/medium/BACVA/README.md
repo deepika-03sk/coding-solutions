@@ -57,7 +57,7 @@ For the third account number, the digit sum is $10$, which is divisible by $10$.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-26T15:13:23.116Z  
+**Submitted:** 2026-10-26T15:13:26.654Z  
 
 ```java
 import java.util.*;
