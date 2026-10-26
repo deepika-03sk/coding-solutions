@@ -10,14 +10,13 @@ class Codechef
 		int t=sc.nextInt();
 		while(t-->0)
 		{
-		    long a=sc.nextLong();
+		    String a=sc.next();
 		    int dig;
 		    int sum=0;
-		    while(a>0)
+		  
+		    for(int i=0;i<a.length();i++)
 		    {
-		        dig=(int)(a % 10);
-		        sum=dig+sum;
-		        a=a/10;
+		        sum=sum+(a.charAt(i)-'0');
 		    }
 		    if(sum%10==0)
 		    {
