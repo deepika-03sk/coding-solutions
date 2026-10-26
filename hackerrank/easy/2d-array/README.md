@@ -1,4 +1,4 @@
-# Arrays - DS
+# 2D Array - DS
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-green)
 
@@ -66,7 +66,7 @@ Each of the $6$ lines of inputs $arr[i]$ contains $6$ space-separated integers $
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-26T11:32:25.380Z  
+**Submitted:** 2026-10-26T11:42:44.419Z  
 
 ```java
 import java.io.*;
@@ -84,20 +84,24 @@ import static java.util.stream.Collectors.toList;
 class Result {
 
     /*
-     * Complete the 'reverseArray' function below.
+     * Complete the 'hourglassSum' function below.
      *
-     * The function is expected to return an INTEGER_ARRAY.
-     * The function accepts INTEGER_ARRAY a as parameter.
+     * The function is expected to return an INTEGER.
+     * The function accepts 2D_INTEGER_ARRAY arr as parameter.
      */
 
-    public static List<Integer> reverseArray(List<Integer> a) {
+    public static int hourglassSum(List<List<Integer>> arr) {
     // Write your code here
-    List<Integer> b=new ArrayList();
-    for(int i=a.size()-1;i>=0;i--)
+    int max=Integer.MIN_VALUE;
+    for(int i=0;i<4;i++)
     {
-        b.add(a.get(i));
+        for(int j=0;j<4;j++)
+        {
+            int sum=arr.get(i).get(j)+arr.get(i).get(j+1)+arr.get(i).get(j+2)+arr.get(i+1).get(j+1)+arr.get(i+2).get(j)+arr.get(i+2).get(j+1)+arr.get(i+2).get(j+2);
+            max=Math.max(max, sum);
+        }
     }
-    return b;
+    return max;
 
     }
 
@@ -108,20 +112,24 @@ public class Solution {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
-        int arrCount = Integer.parseInt(bufferedReader.readLine().trim());
+        List<List<Integer>> arr = new ArrayList<>();
 
-        List<Integer> arr = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
-            .map(Integer::parseInt)
-            .collect(toList());
+        IntStream.range(0, 6).forEach(i -> {
+            try {
+                arr.add(
+                    Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
+                        .map(Integer::parseInt)
+                        .collect(toList())
+                );
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
 
-        List<Integer> res = Result.reverseArray(arr);
+        int result = Result.hourglassSum(arr);
 
-        bufferedWriter.write(
-            res.stream()
-                .map(Object::toString)
-                .collect(joining(" "))
-            + "\n"
-        );
+        bufferedWriter.write(String.valueOf(result));
+        bufferedWriter.newLine();
 
         bufferedReader.close();
         bufferedWriter.close();
