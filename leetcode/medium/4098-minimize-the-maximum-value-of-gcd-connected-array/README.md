@@ -70,8 +70,8 @@ The term `gcd(a, b)` denotes the  **greatest common divisor**  of `a` and `b`.
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 41.5 MB  
-**Submitted:** 2026-11-01T04:01:36.454Z  
+**Memory:** 41.4 MB  
+**Submitted:** 2026-11-01T04:02:50.277Z  
 
 ```java
 class Solution {
@@ -89,7 +89,7 @@ class Solution {
                 break;
             }
         }
-            if(index>0 && value-p<2*index)
+            if(value <=(long)index*p)
             return -1;
         int steps=n-1-index;
         if(steps==0)
