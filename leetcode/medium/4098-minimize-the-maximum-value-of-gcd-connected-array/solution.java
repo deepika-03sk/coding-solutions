@@ -20,6 +20,6 @@ class Solution {
         {
             return value;
         }
-        return value+p+2*steps;
+        return value+p*steps;
     }
 }
