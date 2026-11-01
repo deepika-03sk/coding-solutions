@@ -13,7 +13,7 @@ class Solution {
                 break;
             }
         }
-            if(index>0 && value-p<2*index)
+            if(value <=(long)index*p)
             return -1;
         int steps=n-1-index;
         if(steps==0)
