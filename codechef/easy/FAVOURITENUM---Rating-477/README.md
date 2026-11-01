@@ -82,7 +82,7 @@ Charlie
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-23T15:43:06.504Z  
+**Submitted:** 2026-11-01T17:02:33.920Z  
 
 ```java
 import java.util.Scanner;
