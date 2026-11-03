@@ -13,28 +13,33 @@ import static java.util.stream.Collectors.toList;
 class Result {
 
     /*
-     * Complete the 'birthdayCakeCandles' function below.
+     * Complete the 'timeConversion' function below.
      *
-     * The function is expected to return an INTEGER.
-     * The function accepts INTEGER_ARRAY candles as parameter.
+     * The function is expected to return a STRING.
+     * The function accepts STRING s as parameter.
      */
 
-    public static int birthdayCakeCandles(List<Integer> candles) {
+    public static String timeConversion(String s) {
     // Write your code here
-int max = 0;
-    int count = 0;
+    String time = s.substring(0, 8);
+    String ampm = s.substring(8);
 
-    for(int i = 0; i < candles.size(); i++) {
-        if(candles.get(i) > max) {
-            max = candles.get(i);
-            count = 1;
+    int hour = Integer.parseInt(s.substring(0, 2));
+
+    if(ampm.equals("AM")) {
+        if(hour == 12) {
+            time = "00" + s.substring(2, 8);
         }
-        else if(candles.get(i) == max) {
-            count++;
+    }
+    else {
+        if(hour != 12) {
+            hour = hour + 12;
+            time = hour + s.substring(2, 8);
         }
     }
 
-    return count;
+    return time;
+
     }
 
 }
@@ -44,15 +49,11 @@ public class Solution {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
-        int candlesCount = Integer.parseInt(bufferedReader.readLine().trim());
+        String s = bufferedReader.readLine();
 
-        List<Integer> candles = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
-            .map(Integer::parseInt)
-            .collect(toList());
+        String result = Result.timeConversion(s);
 
-        int result = Result.birthdayCakeCandles(candles);
-
-        bufferedWriter.write(String.valueOf(result));
+        bufferedWriter.write(result);
         bufferedWriter.newLine();
 
         bufferedReader.close();
