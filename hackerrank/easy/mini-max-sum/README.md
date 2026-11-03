@@ -1,4 +1,4 @@
-# Solve Me First
+# Mini-Max Sum
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-green)
 
@@ -40,29 +40,70 @@ $1 \le arr[i] \le 10^9$
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-03T06:52:13.935Z  
+**Submitted:** 2026-11-03T06:57:12.628Z  
 
 ```java
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
 import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+class Result {
+
+    /*
+     * Complete the 'miniMaxSum' function below.
+     *
+     * The function accepts INTEGER_ARRAY arr as parameter.
+     */
+
+    public static void miniMaxSum(List<Integer> arr) {
+    // Write your code here
+
+    long sum = 0;
+    int min = Integer.MAX_VALUE;
+    int max = Integer.MIN_VALUE;
+
+    for(int i = 0; i < 5; i++) {
+        sum += arr.get(i);
+
+        if(arr.get(i) < min) {
+            min = arr.get(i);
+        }
+
+        if(arr.get(i) > max) {
+            max = arr.get(i);
+        }
+    }
+
+    long minSum = sum - max;
+    long maxSum = sum - min;
+
+    System.out.println(minSum + " " + maxSum);
+
+
+    }
+
+}
 
 public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
-    static int solveMeFirst(int a, int b) {
-      return a+b;
-	}
+        List<Integer> arr = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
+            .map(Integer::parseInt)
+            .collect(toList());
 
-  
-   public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int a;
-        a = in.nextInt();
-        int b;
-        b = in.nextInt();
-        in.close();
-        int sum;
-        sum = solveMeFirst(a, b);
-        System.out.println(sum);
-	}
+        Result.miniMaxSum(arr);
+
+        bufferedReader.close();
+    }
 }
 
 ```
