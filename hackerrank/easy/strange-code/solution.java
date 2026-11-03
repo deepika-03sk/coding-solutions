@@ -13,32 +13,22 @@ import static java.util.stream.Collectors.toList;
 class Result {
 
     /*
-     * Complete the 'timeConversion' function below.
+     * Complete the 'strangeCounter' function below.
      *
-     * The function is expected to return a STRING.
-     * The function accepts STRING s as parameter.
+     * The function is expected to return a LONG_INTEGER.
+     * The function accepts LONG_INTEGER t as parameter.
      */
 
-    public static String timeConversion(String s) {
+    public static long strangeCounter(long t) {
     // Write your code here
-    String time = s.substring(0, 8);
-    String ampm = s.substring(8);
-
-    int hour = Integer.parseInt(s.substring(0, 2));
-
-    if(ampm.equals("AM")) {
-        if(hour == 12) {
-            time = "00" + s.substring(2, 8);
-        }
-    }
-    else {
-        if(hour != 12) {
-            hour = hour + 12;
-            time = hour + s.substring(2, 8);
-        }
+    long start = 3;
+    
+    while(t > start) {
+        t = t - start;
+        start = start * 2;
     }
 
-    return time;
+    return start - t + 1;
 
     }
 
@@ -49,11 +39,11 @@ public class Solution {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
-        String s = bufferedReader.readLine();
+        long t = Long.parseLong(bufferedReader.readLine().trim());
 
-        String result = Result.timeConversion(s);
+        long result = Result.strangeCounter(t);
 
-        bufferedWriter.write(result);
+        bufferedWriter.write(String.valueOf(result));
         bufferedWriter.newLine();
 
         bufferedReader.close();
