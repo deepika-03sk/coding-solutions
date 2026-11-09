@@ -56,7 +56,7 @@ NO
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-09T15:34:30.974Z  
+**Submitted:** 2026-11-09T15:35:53.628Z  
 
 ```java
 import java.util.*;
@@ -69,11 +69,15 @@ class Codechef
 	{
 		// your code goes here
 		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		while(t-->0)
+		{
 		int p=sc.nextInt();
 		int d=sc.nextInt();
 		int k=sc.nextInt();
 		int b=sc.nextInt();
 		int cost=p+(d*k);
+		
 		if(b>=cost)
 		{
 		    System.out.println("Yes");
@@ -82,6 +86,7 @@ class Codechef
 		    System.out.println("NO");
 		}
 
+	}
 	}
 }
 
