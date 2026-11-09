@@ -82,7 +82,7 @@ The only group is the single student at index $3$.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-09T16:08:40.084Z  
+**Submitted:** 2026-11-09T16:09:34.257Z  
 
 ```java
 import java.util.*;
@@ -112,7 +112,7 @@ class Codechef
 		        if(currlen>max)
 		        {
 		            max=currlen;
-		            st=currlen;
+		            st=currst;
 		            end=i-1;
 		        }
 		        currlen=0;
