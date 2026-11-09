@@ -82,7 +82,7 @@ The only group is the single student at index $3$.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-09T16:07:38.241Z  
+**Submitted:** 2026-11-09T16:08:40.084Z  
 
 ```java
 import java.util.*;
@@ -123,7 +123,7 @@ class Codechef
 		    st=currst;
 		    end=n-1;
 		}
-		System.out.println(st+" "+end);
+		System.out.println(st + " " + end);
 
 	}
 }
