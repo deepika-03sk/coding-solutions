@@ -25,7 +25,7 @@ class Codechef
 		        if(currlen>max)
 		        {
 		            max=currlen;
-		            st=currlen;
+		            st=currst;
 		            end=i-1;
 		        }
 		        currlen=0;
