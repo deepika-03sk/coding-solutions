@@ -36,7 +36,7 @@ class Codechef
 		    st=currst;
 		    end=n-1;
 		}
-		System.out.println(st+" "+end);
+		System.out.println(st + " " + end);
 
 	}
 }
