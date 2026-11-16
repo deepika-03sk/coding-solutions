@@ -66,18 +66,10 @@ Both sentences contain `hello` twice and `world` once. Punctuation separates the
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-16T14:59:02.815Z  
+**Submitted:** 2026-11-16T14:59:26.997Z  
 
 ```java
 import java.util.*;
-import java.lang.*;
-import java.io.*;
-
-class Codechef
-{
-	public static void main (String[] args) throws java.lang.Exception
-	{
-	import java.util.*;
 
 class Codechef
 {
@@ -116,10 +108,6 @@ class Codechef
             System.out.println("The sentences are not anagrams.");
     }
 }
-
-	}
-}
-
 ```
 
 ---
