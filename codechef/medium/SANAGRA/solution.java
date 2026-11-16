@@ -1,12 +1,4 @@
 import java.util.*;
-import java.lang.*;
-import java.io.*;
-
-class Codechef
-{
-	public static void main (String[] args) throws java.lang.Exception
-	{
-	import java.util.*;
 
 class Codechef
 {
@@ -44,7 +36,4 @@ class Codechef
         else
             System.out.println("The sentences are not anagrams.");
     }
-}
-
-	}
 }
