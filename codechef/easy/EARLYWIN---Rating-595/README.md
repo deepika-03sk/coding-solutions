@@ -70,7 +70,7 @@ The longest common starting string of their names is the first four characters, 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-17T12:13:32.243Z  
+**Submitted:** 2026-11-17T12:14:00.353Z  
 
 ```java
 import java.util.*;
