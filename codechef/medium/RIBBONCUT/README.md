@@ -75,7 +75,7 @@ YES
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T14:56:41.637Z  
+**Submitted:** 2026-11-18T14:56:45.498Z  
 
 ```java
 import java.util.*;
@@ -87,6 +87,15 @@ class Codechef
 	public static void main (String[] args) throws java.lang.Exception
 	{
 		// your code goes here
+		Scanner sc=new Scanner (System.in);
+		int n=sc.nextInt();
+		if(n%3==0)
+		{
+		    System.out.println("YES");
+		}
+		else{
+		    System.out.println("NO");
+		}
 
 	}
 }
