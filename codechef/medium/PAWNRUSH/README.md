@@ -61,7 +61,7 @@ The pawn first moves two rows, from row $2$ to row $4$, and then one row at a ti
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-25T14:48:59.205Z  
+**Submitted:** 2026-11-25T14:49:02.758Z  
 
 ```java
 import java.util.*;
