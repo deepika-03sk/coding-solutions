@@ -12,11 +12,12 @@ class Codechef
 		if(r==2)
 		{
 		    System.out.println("5");
-		
+		}
 		
 
-	}
+	
 	else{
 	    System.out.println(8-r);
+	}
 	}
 }
